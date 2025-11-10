@@ -16,9 +16,9 @@
 ;(define (p) (p))
 ;(define (test x y) (if (= x 0) 0 y))
 ;(test 0 (p))
-; This will return nothing, because (p) will keep calling itself indefinitely.
+; この関数は何も返さない。schemeは適用順序評価を採用しているため、test関数の引数yに渡された(p)が先に評価され無限ループになるため。
 
-; newton's method for approximating square roots
+; ニュートン法による平方根の計算
 (define (sqrt x)
   (sqrt-iter 1.0 x))
 
